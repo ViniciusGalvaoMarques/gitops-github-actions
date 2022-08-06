@@ -59,4 +59,4 @@ envs:
     
 key-1: "{{ env-1 }}"
 key-2: "{{ envs.env-1 }}"
-key-3: "{{ envs.env-3 }}"
+key-3: "{{ envs.env-2 }}"
