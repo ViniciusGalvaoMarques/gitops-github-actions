@@ -1,0 +1,62 @@
+#In YAML files, indentation must be done with spaces instead of tabs.
+
+#Number var
+number: 1
+
+#Boolean var
+boolean: true
+
+#String var
+string-1: value
+
+#String var
+string-2: "value value"
+
+#Long text string, using breaking lines
+long-text-with-breakline: |
+    rum command ex
+    rum command ex
+    rum command ex
+
+#Long text string, without breanking line
+long-text-without-breakline: >
+    my long text my long text for exemple
+
+#Objects
+object-1:
+    attribute-1: value
+    attribute-2: value
+    attribute-3: value
+
+    child-object:
+        attribute-1: value
+        attribute-2: value
+        attribute-3: value
+
+#Simple Array
+array-1:
+    - item1
+    - item2
+    - item3
+
+#Array as JSON 
+array-json: [item1, item2, item3]
+
+#Array of objects
+array-object:
+    - obj-1-attribute-1: value
+      obj-1-attribute-2: value
+
+    - obj-2-attribute-1: value
+      obj-2-attribute-2: value
+
+#Variable placeholders (not natively)
+env-1: value
+
+envs:
+    env-1: value
+    env-2: value
+    
+key-1: "{{ env-1 }}"
+key-2: "{{ envs.env-1 }}"
+key-3: "{{ envs.env-3 }}"
