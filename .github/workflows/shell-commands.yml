@@ -6,6 +6,7 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+
       - name: echo a string
         run: echo "Hello World"
         
@@ -13,3 +14,10 @@ jobs:
         run: |
           npm -v
           node -v
+
+      - name: python script
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+        
